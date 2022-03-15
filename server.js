@@ -53,7 +53,6 @@ app.get("/:id", (req, res) => {
         }
     })
 });
-
 app.get("/log/:id", (req, res) => {
     var item = req.path;
     item = item.replace("/log/:", "");
@@ -73,4 +72,7 @@ app.get("/log/:id", (req, res) => {
             res.send({"Status" : "No"});
         }
     })
+});
+app.get("/bye", (req, res) => {
+    res.end("ok");
 });
